@@ -1,0 +1,5 @@
+<div class="form__group field">
+  <form #taskForm="ngForm" (ngSubmit)="onSubmit()"><input [(ngModel)]="task" type="text" class="form__field" placeholder="Task" name="name" id="name" required
+      value=""><label for="name" class="form__label">Task</label><input class="form__submit" type="submit" value="+">
+  </form>
+</div>

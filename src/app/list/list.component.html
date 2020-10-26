@@ -3,7 +3,7 @@
         [class.done]="element.done === true"
         (click)="onSelect(element._id)">
         <span class="text">{{element.name}}</span>
-        <button (click)="onRemove(element._id)">x</button>
+        <button (click)="onRemove($event, element._id)">x</button>
     </li>
 </ul>
 <ng-template #noTasks>

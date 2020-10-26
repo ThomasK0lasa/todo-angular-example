@@ -18,8 +18,9 @@ export class ListComponent implements OnInit {
     this.ListService.updateElement(id);
   }
 
-  onRemove(id : string) {
+  onRemove(event, id : string) {
     this.ListService.removeElement(id);
+    event.stopPropagation();
   }
 
   trackItem(item: any):any {

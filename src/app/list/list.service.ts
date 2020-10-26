@@ -44,7 +44,14 @@ export class ListService {
   }
 
   removeElement(id : string): void {
-    this.http.delete(this.serverUrl+id).subscribe();
+    this.http.delete(this.serverUrl+id).subscribe({
+      next: data => {
+        this.refreshList();
+      },
+      error: error => {
+        console.error('There was an error!', error);
+      }
+    });
   }
 
 }

@@ -1,5 +1,5 @@
-<ul *ngIf="checkIfDataExists(listService.elements) else noTasks">
-    <li *ngFor="let element of listService.elements, trackBy:trackItem;"
+<ul *ngIf="checkIfDataExists(ListService.elements) else noTasks">
+    <li *ngFor="let element of ListService.elements, trackBy:trackItem;"
         [class.done]="element.done === true"
         (click)="onSelect(element._id)">
         <span class="text">{{element.name}}</span>

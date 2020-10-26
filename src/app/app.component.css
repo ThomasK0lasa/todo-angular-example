@@ -1,0 +1,14 @@
+.app {
+    text-align: center;
+}
+
+.app-header {
+    border-bottom: 10px solid whitesmoke;
+    margin: 5vh;
+    margin-bottom: 10vh;
+    padding-right: 10vh;
+    height: calc(10px + 6vmin);
+    text-align: right;
+    font-size: calc(10px + 2vmin);
+    color: whitesmoke;
+}

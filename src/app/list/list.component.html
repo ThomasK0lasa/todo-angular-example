@@ -1,4 +1,4 @@
-<ul>
+<ul *ngIf="checkIfDataExists(listService.elements) else noTasks">
     <li *ngFor="let element of listService.elements, trackBy:trackItem;"
         [class.done]="element.done === true"
         (click)="onSelect(element._id)">
@@ -6,3 +6,6 @@
         <button (click)="onRemove(element._id)">x</button>
     </li>
 </ul>
+<ng-template #noTasks>
+    <p>Seems that You don't have any pending tasks. Use form to add new ones. :)</p>
+</ng-template>

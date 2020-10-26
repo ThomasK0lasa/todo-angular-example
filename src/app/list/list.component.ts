@@ -1,16 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { ListService } from './list.service';
-import { List } from './list';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
+  styleUrls: ['./list.component.css'],
 })
 export class ListComponent implements OnInit {
   serverUrl = 'http://localhost:3001/v1/elements/';
 
-  constructor(private http: HttpClient, private listService: ListService) { }
+  constructor(private http: HttpClient, public listService: ListService) { }
 
   ngOnInit() {
     this.listService.refreshList();
@@ -38,5 +38,13 @@ export class ListComponent implements OnInit {
 
   trackItem(item: any):any {
     return item._id;
+  }
+
+  checkIfDataExists(elements) {
+    if (elements != undefined && elements.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

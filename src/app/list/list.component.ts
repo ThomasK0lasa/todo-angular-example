@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ListService } from './list.service';
 
 @Component({
@@ -6,13 +6,13 @@ import { ListService } from './list.service';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css'],
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
 
   constructor(public ListService: ListService) { }
 
-  ngOnInit() {
-    this.ListService.refreshList();
-  }
+  // ngOnInit() {
+  //   this.ListService.getElements();
+  // }
 
   onSelect(id : string) {
     this.ListService.updateElement(id);
@@ -28,7 +28,6 @@ export class ListComponent implements OnInit {
   }
 
   checkIfDataExists(elements) {
-    console.log(elements);
     if (elements.length > 0) {
       return true;
     } else {

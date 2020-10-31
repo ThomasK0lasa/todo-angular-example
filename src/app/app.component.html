@@ -2,6 +2,10 @@
   <header class="app-header">
     <h1>{{title}}</h1>
   </header>
-  <app-form></app-form>
-  <app-list></app-list>
+  <p *ngIf="ListService.canConnect===null">Loading...</p>
+  <ng-template [ngIf]="ListService.canConnect===true">
+    <app-form></app-form>
+    <app-list></app-list>
+  </ng-template>
+  <p class="error" *ngIf="ListService.canConnect===false">Error when trying to connect to DB. :(</p>
 </div>

@@ -1,27 +1,38 @@
-# Todo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+# ToDo Angular
 
-## Development server
+This is an example of a ToDo project in Angular with use of an external API server. I wrote it to learn Angular and a modern JS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Get started
 
-## Code scaffolding
+*Notice - this app needs a **backend app** which is available here: [ToDo Backend](https://github.com/ThomasK0lasa/todo-backend-example)*
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install dependencies...
 
-## Build
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+...then start
 
-## Running unit tests
+```bash
+npm start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**npm run dev** should automatically open your browser and navigate to [localhost:4200](http://localhost:4200). You should see the app running.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# More examples in different frameworks
 
-## Further help
+Other frameworks use same backend app and db in Mongo.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## List
+Here's a linked list of other repos:
+- [ToDo Vue](https://github.com/ThomasK0lasa/todo-vue-example)
+- [ToDo Mithril](https://github.com/ThomasK0lasa/todo-mithril-example)
+- [ToDo React](https://github.com/ThomasK0lasa/todo-react-example)
+- [ToDo Svelte](https://github.com/ThomasK0lasa/todo-svelte-example)
+
+## Article
+
+Article "I built the same app in 5 different frameworks as a JS noob" coming soon. :)
